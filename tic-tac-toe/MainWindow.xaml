@@ -1,0 +1,89 @@
+﻿<Window x:Class="tic_tac_toe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tic-Tac-Toe" Height="500" Width="450" Icon="/Designer.ico">
+    <Window.Resources>
+        <Storyboard x:Key="WinningAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                             From="1" To="1.2" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                             From="1" To="1.2" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Game Mode:" VerticalAlignment="Center"/>
+            <ComboBox Name="GameModeComboBox" SelectionChanged="GameModeComboBox_SelectionChanged" Margin="10,0">
+                <ComboBoxItem Content="1 Player" IsSelected="True"/>
+                <ComboBoxItem Content="2 Players"/>
+            </ComboBox>
+
+            <Label Content="Difficulty Level:" VerticalAlignment="Center"/>
+            <ComboBox Name="DifficultyComboBox" SelectionChanged="DifficultyComboBox_SelectionChanged" Margin="10,0">
+                <ComboBoxItem Content="Easy" IsSelected="True"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Hard"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Game Grid -->
+        <UniformGrid Name="GameGrid" Rows="3" Columns="3" Margin="10" Grid.Row="2">
+            <Button Click="Button_Click" Background="LightCoral" BorderBrush="DarkBlue" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightGreen" BorderBrush="DarkGreen" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightCoral" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightYellow" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightBlue" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightYellow" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightCoral" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightGreen" BorderBrush="DarkBlue" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+            <Button Click="Button_Click" Background="LightCoral" BorderBrush="DarkRed" FontSize="50" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <ScaleTransform />
+                </Button.RenderTransform>
+            </Button>
+        </UniformGrid>
+
+        <!-- Reset Button -->
+        <Button Name="btnReset" Content="Reset Game" Grid.Row="3" Click="ResetGame_Click" FontSize="18" />
+    </Grid>
+</Window>
