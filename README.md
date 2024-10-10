@@ -4,7 +4,7 @@ This is a C# Tic-Tac-Toe game with both AI and multiplayer modes.
 
 ## Play or Download on itch.io
 
-[Click here to play or download the game on itch.io]((https://amirmahamid.itch.io/tictactoe))
+[Click here to play or download the game on itch.io](https://yourgame.itch.io/tictactoe](https://amirmahamid.itch.io/tictactoe)
 
 ## Features
 - 1 Player mode vs AI
